@@ -195,3 +195,95 @@ const combs = numberz
   .filter((nz) => nz % 2 === 0)
   .map((n) => n * n);
 console.log(combs);
+
+
+
+//Reduce():reduce() is a method that takes an array and reduces it into a single value by running a function on each element — one after another.
+
+//find max
+let ms = [5, 8, 3, 10, 2];
+let max = ms.reduce((a, b) => a > b ? a : b);
+console.log(max)
+
+//find total
+let ns = [1, 2, 3, 4, 5];
+let sums = ns.reduce((a, b) => a + b, 0);
+console.log(sums);
+
+//concat strings
+const words = ["Hi", "there", "friend!"];
+const sen = words.reduce((a, b) => a + " " + b, "Hello,");
+console.log(sen);
+
+
+//reduceRight(): reduceRight() works exactly like reduce(),but it processes the array from right to left instead of left to right.
+let nr = [1, 2, 3, 4, 5];
+let subtr = nr.reduceRight((a, b) => a - b);
+console.log(subtr);
+
+
+//every(): checks if all elements in an array pass the test implemented by the provided function. returns boolean value: true or false.
+let nos = [1, 2, 3, 4, 5];
+let allPositive = nos.every((ns) => ns > 0);
+console.log(allPositive);
+
+
+/*
+  The find() method returns the first element in an array that passes a test (the test is written as a function).
+
+If no element passes the test → it returns undefined.
+
+filter() → returns all matches (as an array)
+
+find() → returns only the first match (as a single value)
+*/
+const namez = ["Ava", "Ben", "Chris", "Ben", "Dana"];
+const foundName = namez.find(name=>name ==="Ben");
+console.log(foundName);
+
+const numz = [5,3,4,5,2,8,0];
+const findFirstEven = numz.find(num=>num%2===0);
+console.log(findFirstEven);
+
+
+/*
+  includes() checks if a specific value exists in an array (or even in a string).
+It returns:
+
+✅ true → if the value is found
+
+❌ false → if it isn’t found
+
+🧩 Syntax:
+array.includes(valueToFind, startIndex);
+
+valueToFind → what you’re looking for
+
+startIndex (optional) → where to start checking (default is 0)
+*/
+
+let frts = ["apple", "banana", "cherry"];
+console.log(frts.includes("banana"));
+console.log(frts.includes("cherry"));
+console.log(frts.includes("cherry", 0));
+
+let nms = [1, 2, 3, 4, 2];
+console.log(nms.includes(2,3));
+
+
+// Array.isArray() : Checks whether the passed value is an array
+/*
+Sometimes, typeof can’t tell arrays apart from objects:
+
+typeof [1,2,3]; // "object"
+typeof {a:1};   // "object"
+
+So Array.isArray() is the correct way to check for arrays.
+*/
+let frs = ["apple", "banana", "orange", "grape"]
+let isArray = Array.isArray(frs);
+
+const data = [1, 2, 3];
+console.log(typeof data); 
+console.log(Array.isArray(data));
+
