@@ -87,8 +87,27 @@ while(he<hey.length){
   he++;
 }
 
+//reverse array loop
 let h = hey.length - 1;
 while(h>=0){
   console.log(hey[h]);
   h--;
+};
+
+let hoami = ['mridupawan',"coder" , "xxehacker" , "Bordoloi", 30];
+let k = hoami.length - 1;
+
+while(k>=0){
+  console.log(hoami[k]);
+  k--;
+}
+
+let m = 1;
+while(m<=10){
+  console.log(m);
+  m++;
+}
+while(m<=20 && m%2==0){
+  console.log(m);
+  m++;
 }
