@@ -111,3 +111,17 @@ while(m<=20 && m%2==0){
   console.log(m);
   m++;
 }
+
+
+//object iteration using while loop
+let whoru = {
+    name: 'mridupawan',
+    age: 30,
+    hobby: 'Hacking'
+};
+let values = Object.values(whoru);
+let w = 0;
+while(w<values.length){
+  console.log(values[w]);
+  w++;
+}
