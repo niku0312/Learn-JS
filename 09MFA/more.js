@@ -50,11 +50,53 @@ whuami.map((v, k)=>{
 
 
 
-//Reduce methods
-let whoru = ['mridupawan', 'coder', 'xxehacker', 'Bordoloi', 30];
-let searchItem = "mridupawan";
+//Filter method
+let whumi = ['mridupawan',"coder" , "xxehacker" , "Bordoloi", 30];
+let filt = whumi.filter((e)=>{
+  return e !== 'mridupawan';
+});
+console.log(filt);
 
-let count = whoru.reduce((a,c)=>{
-  return c === searchItem?a+1:a;
+let nos = [2,3,4,5,6,7,8];
+let onlyEven = nos.filter((e)=>e%2===0);
+console.log(onlyEven);
+
+//filter over string
+let prl = "javascript";
+let flt = prl.split('').filter((e)=>{
+  return e!=='s';
+});
+console.log(flt);
+
+
+//filter by value
+let whomy = [
+  {
+    name: 'mridupawan',
+    age: 30,
+    hobby: 'hacking'
+  },
+  {
+    name: 'nakul',
+    age: 25,
+    hobby: 'coding'
+  }
+]
+
+let reslt = whomy.filter((vls)=>{
+  return vls.name === 'nakul';
+})
+console.log(reslt);
+
+
+
+//Reduce method
+//over array
+let whuis = ['mridupawan', 'coder', 'xxehacker', 'Bordoloi', 30];
+let srchItem = "mridupawan";
+
+let cnt = whuis.reduce((a,c)=>{
+  return c === srchItem ? a + 1 : a;
 }, 0);
-console.log(count);
+
+console.log(cnt);
