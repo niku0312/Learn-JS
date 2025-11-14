@@ -100,3 +100,29 @@ let cnt = whuis.reduce((a,c)=>{
 }, 0);
 
 console.log(cnt);
+
+
+let nums = [10, 20, 30];
+
+let totl = nums.reduce((a,c)=>{
+  return a+c;
+}, 0);
+console.log(nums); 
+
+let nms = [1, 4, 7].reduce((acc, curr) => {
+    return acc + 1;
+}, 0);
+console.log(nms);
+
+let whoamy = {
+  name: 'mridupawan',
+  age: 30,
+  hobby: 'coding'
+};
+
+let totalLength = Object.values(whoami).reduce((accumulator, currentValue) => {
+  // Convert non-string values to string for length calculation
+  return accumulator + (typeof currentValue === 'string' ? currentValue.length : currentValue.toString().length);
+}, 0);
+
+console.log(totalLength); // Output: 18
