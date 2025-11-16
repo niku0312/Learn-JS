@@ -126,3 +126,49 @@ let totalLength = Object.values(whoami).reduce((accumulator, currentValue) => {
 }, 0);
 
 console.log(totalLength); // Output: 18
+
+//filter method
+
+let huru = ['mridupawan',"coder" , "xxehacker" , "Bordoloi", 30];
+let filtr = huru.filter((e)=>{
+  return e !== 30
+});
+console.log(filtr);
+
+let whoisme = {
+  name: "Nick",
+  age: 25,
+  hobby: "Coding"
+}
+
+let filtR = Object.entries(whoisme).filter(([k, v])=>{
+  return v !== 25;
+});
+console.log(filtR);
+
+//over string
+let huami = "javascript";
+let filtar = huami.split('').filter((e)=>{
+  return e !== "s";
+});
+console.log(filtar);
+
+
+//filter by value
+let details = [
+    {
+    name: 'mridupawan',
+    age: 30,
+    hobby: 'hacking'
+  },
+  {
+    name: 'nakul',
+    age: 25,
+    hobby: 'coding'
+  }
+]
+
+let result = details.filter((values)=>{
+  return values.name === "nakul";
+});
+console.log(result);
