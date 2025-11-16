@@ -39,5 +39,3 @@ let p22 = new p2("Niks", 20);
 p22.greet();
 p22.menAge();
 
-
-//Prototype:
