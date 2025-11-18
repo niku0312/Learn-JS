@@ -101,3 +101,41 @@ const personMethods = {
 const p = Object.create(personMethods);
 p.name = "Nikz";
 p.greet();
+
+
+//factory functions
+function createPerson(name, age){
+  return {
+    name: name,
+    age: age,
+
+    greet: function(){
+      // console.log("Hello, "+ this.name);
+      return `Hello, ${this.name}`;
+    }
+  }
+}
+const john = createPerson("John", 30);
+john.greet();
+
+function createFn(name){
+  return{
+    name: name,
+    sayHi(){
+      return `Hi, ${this.name}`
+    }
+  }
+}
+
+const nick = createFn("Nick");
+console.log(nick.sayHi());
+
+
+//singleton pattern:
+const pers = {
+  name: "Nikx",
+  age: 24,
+  isAdult: true
+};
+
+console.log(pers);
